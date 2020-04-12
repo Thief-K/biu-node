@@ -4,14 +4,16 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "serve": "node app.js"
+    "serve": "node app.js",
+    "debugger": "node --inspect app.js"
   },
   "author": "Konp",
   "license": "ISC",
   "dependencies": {
     "@koa/cors": "^2.2.3",
     "koa": "^2.11.0",
-    "koa-router": "^8.0.8"
+    "koa-router": "^8.0.8",
+    "mongoose": "^5.9.7"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
