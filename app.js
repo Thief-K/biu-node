@@ -13,4 +13,8 @@ app.use(cors())
 // router
 app.use(router.routes()).use(router.allowedMethods())
 
+const connect = require('./src/util/mangobd/connect')
+
+connect()
+
 app.listen(3000)
