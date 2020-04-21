@@ -1,20 +1,22 @@
 const Koa = require('koa')
 const app = new Koa()
-const router = require('./src/router')
-const cors = require('@koa/cors')
 
-// app.use(async ctx => {
-//   ctx.body = 'Hello World'
-// })
+const cors = require('@koa/cors')
+const bodyParser = require('koa-bodyparser')
+const router = require('./src/router')
+const connect = require('./src/util/mangobd/connect')
 
 // cors
 app.use(cors())
 
+// body
+app.use(bodyParser())
+
 // router
-app.use(router.routes()).use(router.allowedMethods())
+app.use(router.routes())
+  .use(router.allowedMethods())
 
-const connect = require('./src/util/mangobd/connect')
-
+// database
 connect()
 
 app.listen(3000)
