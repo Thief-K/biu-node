@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "serve": "node app.js",
-    "debugger": "node --inspect app.js"
+    "dev": "node --inspect app.js"
   },
   "author": "Konp",
   "license": "ISC",

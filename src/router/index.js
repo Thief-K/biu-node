@@ -4,7 +4,7 @@ const router = new Router({
 })
 
 function addRouter(module) {
-  const controller = module.controller
+  const controller = module.name
   const mappers = module.mappers
   mappers.forEach(mapper => {
     router.all(
